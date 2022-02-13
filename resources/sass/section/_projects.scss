@@ -1,0 +1,14 @@
+
+.section--projects {
+
+table{
+    background-color: $azure;
+}
+
+input{
+&:first-of-type{
+    background-color: $aliceblue;
+}
+}
+
+}

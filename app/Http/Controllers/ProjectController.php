@@ -183,7 +183,7 @@ class ProjectController extends Controller
         request()->validate([
             'name' => 'required|max:255',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
 
         /// $input = $request->all();
@@ -193,7 +193,10 @@ class ProjectController extends Controller
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
 
+        }else{
+            $profileImage = 1;
         }
+
 
         //  Product::create($input);
 
@@ -251,7 +254,7 @@ class ProjectController extends Controller
         request()->validate([
             'name' => 'required|max:255',
             'description' => 'required',
-            'image' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+            'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
          ]);
 
         if ($image = $request->file('image')) {
@@ -259,7 +262,10 @@ class ProjectController extends Controller
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
 
+        }else{
+            $profileImage = 1;
         }
+
 
         $project = Project::find($id);
         $project->name = $request->name;

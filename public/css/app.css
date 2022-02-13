@@ -11286,3 +11286,9 @@ textarea.form-control-lg {
     display: none !important;
   }
 }
+.section--projects table {
+  background-color: azure;
+}
+.section--projects input:first-of-type {
+  background-color: aliceblue;
+}
