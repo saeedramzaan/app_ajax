@@ -21,7 +21,7 @@
 
         <section class="section--projects">
             <div class="container">
-                <h2 class="text-center mt-5 mb-3">Laravel Project Manager</h2>
+                <h2 class="text-center mt-5 mb-3">Project Manager</h2>
                 <div class="card">
                     <div class="card-header">
                         <button class="btn btn-outline-primary" onclick="createProject()">
@@ -187,9 +187,6 @@
                 }));
             });
 
-
-
-
             function validation(response) {
                 if (typeof response.responseJSON.errors !== 'undefined') {
                     console.log(response)
@@ -270,7 +267,7 @@
             */
             function editProject(id) {
                 $.ajax({
-                    url: "/show/" + id,
+                    url: "/projects/" + id,
                     type: "GET",
                     contentType: false,
                     cache: false,
@@ -296,7 +293,7 @@
                 $("#name-info").html("");
                 $("#description-info").html("");
                 $.ajax({
-                    url: "/show/" + id,
+                    url: "/projects/" + id,
                     type: "GET",
                     data: {
                         _token: '{{ csrf_token() }}'

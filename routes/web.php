@@ -38,7 +38,7 @@ Route::post('/store', [UserDataController::class, 'store']);
 
 Route::get('user/getuser', [UserDataController::class, 'data']);
 
-Route::get('show/{id}', [ProjectController::class, 'show']);
+//Route::get('show/{id}', [ProjectController::class, 'show']);
 
 Route::post('update/{id}', [ProjectController::class, 'update']);
 
