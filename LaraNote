@@ -1,0 +1,166 @@
+
+
+composer create-project --prefer-dist laravel/laravel blog
+
+.evn file configure 
+
+-----------------------------------------------------------
+
+composer require laravel/ui
+
+php artisan ui bootstrap
+
+php artisan ui bootstrap --auth
+
+npm install
+
+npm run dev
+
+----------------------------------------------------------------
+
+(dont need to use this)
+php artisan make:migration create_products_table --create=products
+
+ php artisan make:model modelName -m
+ [short code for model and migration both] 
+
+php artisan migrate
+
+php artisan make:controller ProductController --resource
+
+
+routes/web.php
+
+use App\Http\Controllers\ProductController;
+  
+Route::resource('products', ProductController::class);
+
+-----------------------------------------------------------
+
+(ADD COLUMN)
+php artisan make:migration  add_column_post --table=posts
+
+(Create TABLE)
+php artisan migrate:make create_users_table --create=users
+
+
+Schema::table('users', function (Blueprint $table) {
+    $table->string('email');
+});
+
+php artisan migrate
+
+------------------------------------------------------------
+
+Rename Table 
+
+Schema::rename($currentTableName, $newTableName);
+
+(try to avoid much as possible. it woud make conflict most of the time)
+
+---------------------------------------------------------
+
+Install Auth on Laravel 8
+
+https://www.itsolutionstuff.com/post/laravel-8-install-bootstrap-example-tutorialexample.html
+
+Laravel 8 crud
+https://www.itsolutionstuff.com/post/laravel-8-crud-application-tutorial-for-beginnersexample.html
+
+-----------------------------------------------------
+Finally Work out
+https://www.studentstutorial.com/laravel/laravel-ajax-update
+
+---------------------------------------------------------
+
+
+Post man required field
+-------------
+
+Content-Length : <calculated when request is sent>
+
+Content-Type : application/x-www-form-urlencoded
+
+Cookie : XSRF-TOKEN=eyJpdiI6IlRaOWxWNXA3S0hlZW1sclJuRWJaZnc9PSIsInZhbHVlIjoibVA4Mm1CMlBTS1NvbEtHNmJGcHFUcWVWTnlsOUdYd2gzcFdLZ1dzTWN1MEdkdXdKOWI0VXRhYVF1NEh2MndiUXAzNGF4MUJ4MDYwbXM0SkF2dVlLa0xsZnNjVDI0aFVZSFNxV3NjNnJjK3pyQzl1ZlJEZ1lWdUhWN3p1aWt4VnYiLCJtYWMiOiI4YTdlNmE1NDc0NGMxMTg5NjViMDJhOGUzYmYwYzgzYTdjMjkxZjE2MWNmZThlZGFiOWIyMGMxZjRmOWJkMmZmIn0%3D; postapp_session=eyJpdiI6Im9ONlF4SERHem9mNWZmSEJxbnMrNnc9PSIsInZhbHVlIjoiWkN5K0h4YzdOVlpGMXlJV3l1SHdwMVRaQ0FmSW5kYlF0QUo2ekVVaVFhVU9TRjYvWG9KK0tVTlVFMFFHblVMUk82cFFuNEFncUZPeFM1UHpZZ0VmQ0sxeFhKSkNzellEeEhCaTZCQmVOTkl4alk1QmhDS2h6V3ExRDVGREpPckEiLCJtYWMiOiIwODkxOGU0ZjFiZDk3ZDgxNTUyMWRiNjFiYjRkMjk4Y2U2ZjRhNzI5ZDU1ZTgxNjUzNjYyZWZhOGI0YTZlOWI1In0%3D
+
+ token in the body
+ 
+_token : code only
+
+to avoid token to check, comment http/kernel.php -- csrf
+
+------------------------------------------
+
+Errors
+
+Array to string conversion
+
+  at vendor/laravel/framework/src/Illuminate/Routing/ResourceRegistrar.php:416
+  
+  remove array from resource route 
+  Route::resource('test',['TestController::class']);
+  Route::resource('test',TestController::class);
+  
+  ---------------------------
+  
+  Function () does not exist
+  
+    Route::resource('test',['TestController::class','index']);
+    
+    check router array include the array too. 
+    
+    -------------------------------------------------
+    
+    you must be given fillable property if you use request all or to check in postman and comment csrf in http/kernal file/ 
+    
+    ----------------------------------
+    
+    if you add by single value you must give name of postman field as $request->name....
+    
+    -------------------------
+    
+    if you get 404 error, 
+    
+    check that you have applied the resource url /test or /products, 
+    
+    --------------------------------------------
+    
+   Trying to get property 'name' of non-object 
+   
+   may even if you add the id does exist in database. 
+   
+   -------------------------------------------------
+   
+   PUT DELETE POST Method must be mentioned in capital
+   
+   --------------------------------------
+   
+    larave validate
+ 
+ validation always must be at top
+ 
+ -------------------------------
+ 
+500 error - Target class [UserDataController] does not exist
+
+405 error is method is not matching between frond and backend 
+
+404 meaning router url cant identify the specific method which is mentioned in routher
+
+419 error is CSRF token failure. 
+ 
+No query results for model - No such data in database
+ 
+Cannot read properties of undefined (reading 'errors')
+ 
+This error may occurs if unknown variable or if you print something inside of backend function without JSON
+ 
+ Error handling php file
+ 
+ https://stackoverflow.com/questions/54551650/why-does-php-throw-fatal-errors-and-break-with-http-500-although-using-try-catch
+ ------------------------------------------
+ 
+ session_start() must be mentioned all pages to get session id
+ 
+ -------------
+ 

@@ -23,19 +23,24 @@
             <div class="container">
                 <h2 class="text-center mt-5 mb-3">Project Manager</h2>
                 <div class="card">
+
                     <div class="card-header">
                         <button class="btn btn-outline-primary" onclick="createProject()">
                             Create New Project
                         </button>
                     </div>
+
                     <div class="card-body">
                         <div class="form-group">
                             <label>Type a name</label>
                             <input type="text" name="country" id="country" placeholder="Enter country name"
                                 class="form-control">
                         </div>
+                        
                         <div id="alert-div">
                         </div>
+                        
+                        <!-- view record modal -->
                         <table class="table table-bordered table-sm">
                             <thead>
                                 <tr>
@@ -49,6 +54,8 @@
 
                             </tbody>
                         </table>
+
+
                     </div>
                 </div>
             </div>
@@ -62,6 +69,8 @@
                             <button type="button" class="btn-close" data-bs-dismiss="modal"
                                 aria-label="Close"></button>
                         </div>
+
+
                         <div class="modal-body">
                             <div id="error-div"></div>
 
@@ -83,13 +92,8 @@
                                             placeholder="image">
                                     </div>
                                 </div>
-
-
                                 <input type="submit" class="btn btn-outline-primary mt-3" class="btnSubmit" />
 
-                                <ul>
-
-                                </ul>
                                 <div id="alert-div1">
 
                                 </div>
@@ -121,14 +125,15 @@
                 </div>
             </div>
         </section>
+
         <script type="text/javascript">
 
             showAllProjects();
 
             $(document).ready(function(e) {
                 let url = $('meta[name=app-url]').attr("content") + "/projects";
-
                 $("#uploadForm").on('submit', (function(e) {
+
                     event.preventDefault();
                     if ($("#update_id").val() == null || $("#update_id").val() == "") {
                         $.ajax({
@@ -158,6 +163,7 @@
                             }
                         });
                     } else {
+                        // Update DATA
                         $.ajax({
                             headers: {
                                 'X-CSRF-TOKEN': '{{ csrf_token() }}'
@@ -214,7 +220,6 @@
 
             function showAllProjects() {
                 let url = $('meta[name=app-url]').attr("content") + "/projects";
-
                 $.ajax({
                     url: "/all",
                     type: "GET",
@@ -286,9 +291,8 @@
                     }
                 });
             }
-            /*
-                get and display the record info on modal
-            */
+           
+           // Get single data
             function showProject(id) {
                 $("#name-info").html("");
                 $("#description-info").html("");
@@ -310,9 +314,8 @@
                     }
                 });
             }
-            /*
-                delete record function
-            */
+           
+           // DELETE RECORD
             function destroyProject(id) {
                 let url = $('meta[name=app-url]').attr("content") + "/projects/" + id;
                 $.ajax({

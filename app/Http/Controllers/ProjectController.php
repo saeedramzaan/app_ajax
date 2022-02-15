@@ -27,8 +27,7 @@ class ProjectController extends Controller
      */
     public function index()
     {
-     //   $projects = Project::get();
-     //   return view('projects', ['projects' => $projects]);
+
         $projects = Project::get();
         return view('projects', ['projects' => $projects]);
 
@@ -178,6 +177,7 @@ class ProjectController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
+
     public function store(Request $request)
     {
         request()->validate([
@@ -185,8 +185,6 @@ class ProjectController extends Controller
             'description' => 'required',
             'image' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ]);
-
-        /// $input = $request->all();
 
         if ($image = $request->file('image')) {
             $destinationPath = 'image/';
@@ -196,9 +194,6 @@ class ProjectController extends Controller
         }else{
             $profileImage = 1;
         }
-
-
-        //  Product::create($input);
 
         $project = new Project();
         $project->name = $request->name;
@@ -217,10 +212,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
+
     public function show($id)
     {
-        // $project = Project::find($id);
-
         $userData = Project::find($id);
         return json_encode(array('singleInfo' => $userData));
 
@@ -233,10 +228,10 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function edit($id)
     {
         $project = Project::find($id);
-
         return view('projects.edit', ['project' => $project]);
     }
 
@@ -247,10 +242,9 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+
     public function update(Request $request, $id)
     {
-      
-
         request()->validate([
             'name' => 'required|max:255',
             'description' => 'required',
@@ -261,11 +255,9 @@ class ProjectController extends Controller
             $destinationPath = 'image/';
             $profileImage = date('YmdHis') . "." . $image->getClientOriginalExtension();
             $image->move($destinationPath, $profileImage);
-
         }else{
             $profileImage = 1;
         }
-
 
         $project = Project::find($id);
         $project->name = $request->name;
@@ -276,7 +268,6 @@ class ProjectController extends Controller
 
         return redirect()->route('projects.index')
             ->with('success', 'Project updated successfully!');
-
     }
 
     /**
@@ -285,10 +276,12 @@ class ProjectController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
+    
     public function destroy($id)
     {
         Project::destroy($id);
+
         //   return redirect()->route('projects.index')
-        //      ->with('success','Project deleted successfully!');
+        //    ->with('success','Project deleted successfully!');
     }
 }

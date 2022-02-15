@@ -1,0 +1,371 @@
+divulge 
+discretion - Quality of behaving 
+
+
+Amazon
+https://www.linkedin.com/in/inzamamiqbal/
+
+
+https://beyondco.de/blog/testing-api-calls-laravel-package
+
+
+Rest API online. 
+https://reqbin.com/req/php/y36kls3x/test-rest-api-online
+
+
+orchestra/testbench: ^6.23.1
+https://packagist.org/packages/orchestra/testbench-browser-kit
+
+HOw to install a plugin
+https://www.larablocks.com/package/orchestra/testbench
+
+Php and JSON and URL
+https://www.tutsmake.com/get-write-read-load-json-file-from-url-php/
+
+
+PHP JSON decode into a array just showing first character
+$json = '{"status":"OK","id":"2321","password":"f4f4489dcf95c16a31f9fb4ffff329fc","server":"pptpd"}';
+
+$json = json_decode($json, TRUE);
+
+echo "Status: ".$json['status'].PHP_EOL;
+echo "ID: ".$json['id'].PHP_EOL;
+echo "Password: ".$json['password'].PHP_EOL;
+echo "Server: ".$json['server'].PHP_EOL;
+
+
+First push to new project
+git remote add origin https://github.com/saeedramzaan/DogFactAPI.git
+
+
+Solid Principles 
+Has map
+List and tuple 
+Mutable. 
+
+
+
+cyberteam123
+
+Cyberjob@123
+
+Best questions to ask for interviewer
+https://www.indeed.com/career-advice/interviewing/interview-questions-to-employers
+
+Different between Mutable and Immutable
+https://www.afternerd.com/blog/difference-between-list-tuple/
+
+
+Earning 1000$ per month affilate marketing 
+https://www.cloudways.com/blog/how-to-sell-a-website/
+
+
+Myteam@123
+
+--------------------------------
+
+Install Auth on Laravel 8
+
+
+https://www.itsolutionstuff.com/post/laravel-8-install-bootstrap-example-tutorialexample.html
+
+
+
+--------------------------------------
+
+
+
+------------------------------------------------
+
+
+if you get version issue. 
+composer require laravel/ui "^2.0"
+
+
+Not found App\Models
+
+Enter this code inside register controlller
+use App\Models\User;
+
+
+Install bootstrap on Laravel 
+https://www.positronx.io/how-to-properly-install-and-use-bootstrap-in-laravel/
+
+npm WARN deprecated querystring@0.2.1: The querystring API is considered Legacy. new code should use the URLSearchParams API instead.
+
+if you get above error when install npm 
+
+npm i querystring
+
+-------------------------------
+
+Regret because of Alcohol. 
+
+https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4474002/
+
+if password dont match in laravel 
+
+https://laracasts.com/discuss/channels/laravel/these-credentials-do-not-match-our-records-log-in-laravel
+
+Tweety
+https://laracasts.com/series/laravel-6-from-scratch/episodes/67?page=3
+
+---------------------------------------------------------------------------------
+
+PHP artisan migrate --table
+
+php artisan make:migration  add_column_post --table=posts
+
+php artisan --create
+
+php artisan migrate:make create_users_table --create=users
+
+Schema::table('users', function (Blueprint $table) {
+    $table->string('email');
+});
+
+php artisan migrate
+
+--------------------------------------------------------------------------
+Rename Table 
+
+Schema::rename($currentTableName, $newTableName);
+
+
+-----------------------------
+
+Schema::dropIfExists('users'); New table
+
+-------------------------------------------
+
+https://www.diffen.com/difference/Inner_Join_vs_Outer_Join
+
+https://titanwolf.org/Network/Articles/Article?AID=40afd461-9154-4e84-9c10-a89b65e86ca8
+------------------------------------------
+
+https://appsgeyser.com/blog/how-to-make-money-online-with-telegram-channel/
+
+-------------------------------
+
+Query builder vs Eloquent
+
+https://cubettech.com/resources/blog/laravels-query-builder-and-eloquent-orm/
+
+-----------------------------------------
+
+All Eloquent Commands 
+
+https://laravel.com/docs/8.x/eloquent-relationships#the-save-method
+
+
+All Query builder Commands 
+
+https://laravel.com/docs/5.0/queries
+
+----------------------------------------------
+
+Post man required field
+-------------
+
+Content-Length : <calculated when request is sent>
+
+Content-Type : application/x-www-form-urlencoded
+
+Cookie : XSRF-TOKEN=eyJpdiI6IlRaOWxWNXA3S0hlZW1sclJuRWJaZnc9PSIsInZhbHVlIjoibVA4Mm1CMlBTS1NvbEtHNmJGcHFUcWVWTnlsOUdYd2gzcFdLZ1dzTWN1MEdkdXdKOWI0VXRhYVF1NEh2MndiUXAzNGF4MUJ4MDYwbXM0SkF2dVlLa0xsZnNjVDI0aFVZSFNxV3NjNnJjK3pyQzl1ZlJEZ1lWdUhWN3p1aWt4VnYiLCJtYWMiOiI4YTdlNmE1NDc0NGMxMTg5NjViMDJhOGUzYmYwYzgzYTdjMjkxZjE2MWNmZThlZGFiOWIyMGMxZjRmOWJkMmZmIn0%3D; postapp_session=eyJpdiI6Im9ONlF4SERHem9mNWZmSEJxbnMrNnc9PSIsInZhbHVlIjoiWkN5K0h4YzdOVlpGMXlJV3l1SHdwMVRaQ0FmSW5kYlF0QUo2ekVVaVFhVU9TRjYvWG9KK0tVTlVFMFFHblVMUk82cFFuNEFncUZPeFM1UHpZZ0VmQ0sxeFhKSkNzellEeEhCaTZCQmVOTkl4alk1QmhDS2h6V3ExRDVGREpPckEiLCJtYWMiOiIwODkxOGU0ZjFiZDk3ZDgxNTUyMWRiNjFiYjRkMjk4Y2U2ZjRhNzI5ZDU1ZTgxNjUzNjYyZWZhOGI0YTZlOWI1In0%3D
+
+ token in the body
+ 
+_token : code only
+------------------------------------------
+
+Tech pro keyboard
+
+----------------
+
+
+https://laratutorials.com/laravel-8-install-vue-tutorial-example/
+
+https://www.tutsmake.com/laravel-8-vue-js-post-axios-request-tutorial/
+
+----------------------
+header : 
+
+content-type: application/x-www-form-urlencoded
+
+cookie : XSRF-TOKEN=ey
+
+body: 
+
+_token
+username
+email
+------------------------------
+
+419unknown status
+
+if token is missing 
+or 
+duplicate data 
+
+------------------------------
+
+500 unknown status
+
+SQL query exception
+
+or backend conflict
+
+-------------------------------
+
+Database column name shoud be added to postman
+
+-----------------------
+
+if route is not working 
+if method not allowed 
+404 error also clear 
+
+try
+php artisan route:cache
+
+
+-----------------------------
+message error handle in Json
+
+https://stackoverflow.com/questions/22414524/how-can-i-make-laravel-return-a-custom-error-for-a-json-rest-api
+
+---------------
+
+No query results for model - No such data in database
+
+----------------------------
+Retrieve All info
+
+https://laratutorials.com/laravel-8-vue-js-axios-get-request-tutorial-example/
+
+-------------------------
+
+if you have binary (non-alphanumeric) data (or a significantly sized payload) to transmit, use multipart/form-data. Otherwise, use application/x-www-form-urlencoded.
+
+-----------------------------------
+
+https://www.bestbuy.com/site/reviews/asus-laptop-x509-15-6-fhd-nanoedge-display-intel-core-i7-1065g7-cpu-8gb-256gb-windows-10-home-slate-gray-x509ja-db71/6416121
+
+-------------------------------------------
+
+session_start() must be mentioned all pages to get session id
+
+----------------------------------------------------------
+https://www.binaryboxtuts.com/php-tutorials/laravel-tutorials/laravel-8-ajax-crud-app-easy-step-by-step-tutorial/
+
+https://www.codecheef.org/article/autocomplete-search-with-laravel-jquery-and-ajax
+
+https://www.itsolutionstuff.com/post/laravel-8-crud-application-tutorial-for-beginnersexample.html
+
+Finally Work out
+https://www.studentstutorial.com/laravel/laravel-ajax-update
+
+---------------------------------------
+
+500 error - Target class [UserDataController] does not exist
+
+405 error is method is not matching between frond and backend 
+
+404 meaning router url cant identify the specific method which is mentioned in routher
+
+ 419 error is CSRF token failure. 
+ 
+ ------------------------------
+ 
+ Cannot read properties of undefined (reading 'errors')
+ 
+ This error may occurs if unknown variable or if you print something inside of backend function without JSON
+ 
+ -------------------------------------------
+ 
+ Error handling php file
+ -----------------------------------------------
+ 
+https://stackoverflow.com/questions/54551650/why-does-php-throw-fatal-errors-and-break-with-http-500-although-using-try-catch
+ 
+ ------------------------------------------------------
+ BindParam use for assign data type
+ 
+ https://stackoverflow.com/questions/15185282/what-the-difference-between-bindparam-and-executearray
+ https://www.php.net/manual/en/pdostatement.bindparam.php
+ 
+ Security wise no issues. 
+ https://stackoverflow.com/questions/39063043/should-i-use-bindparam-bindvalue-or-execute-for-pdo-prepared-statements
+ 
+ https://www.generacodice.com/en/articolo/4784962/pdo-bindparam-vs-execute
+ 
+ --------------------------------------------------------------
+ 
+ place holder and named in prepared statment. 
+ 
+ ----------------------------------------------
+ 
+ https://ikman.lk/en/ad/boarding-room-rajagiriya-for-rent-colombo
+ 
+ ---------------------------------------
+ larave validate
+ 
+ validation always must be at top
+ 
+ 
+ ----------------------------------------
+ Boostrap padding
+ https://www.geeksforgeeks.org/spacing-in-bootstrap-with-examples/
+ 
+ _----------------------------------------
+ 
+ self-align-center will not work if add padding to element inside
+ ----------------------------
+ 
+ php artisan make:model -m 
+ 
+ This command would create database table too.. 
+ 
+ ............................
+ 
+ 
+ ---------------------
+ 
+ try {
+ 
+   } catch (\Throwable $e) {
+            //DB::rollback();
+            throw $e;
+        }
+        -------------
+        
+  single quotation must be applied to sql qeury, oterise it would not show donw
+  
+  -----------------
+  
+  https://www.codegrepper.com/code-examples/php/inner+join+laravel
+  -------------
+  
+  https://laravel.com/docs/8.x/queries
+  
+  --------------------------------
+  
+
+  
+  ------------------------------
+ 
+
+  
+error: failed to push some refs to 'https://github.com/saeedramzaan/DataImageAPI.git'
+
+ you must type main name correctly
+ 
+ git branch -M main 
+ 
+ ----------------
+
+
+https://laraget.com/blog/how-to-create-an-ajax-pagination-using-laravel
+----------
+
+ 
